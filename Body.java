@@ -1,9 +1,10 @@
-package com.example.one.prj0;
 /****
  * Body类中的实例用来表示宇宙中的行星，恒星或各种物体
  *
  *
  * ***/
+package com.example.one.prj0;
+
 public class Body {
     public double xxPos;//描述物体当前位置的x坐标
     public double yyPos;//描述物体当前位置的y坐标
@@ -103,5 +104,9 @@ public class Body {
         yyVel+=ya*dt;
         xxPos+=dt*xxVel;
         yyPos+=dt*yyVel;
+    }
+    //画自己所在位置画出自己
+    public void draw(){
+        StdDraw.picture(xxPos,yyPos,"images/"+imgFileName);
     }
 }
